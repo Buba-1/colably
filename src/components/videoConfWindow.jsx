@@ -2,9 +2,9 @@ import React from 'react'
 import LeftPanel from './leftpanel'
 import VideoStream from './videoStream'
 
-const videoConfWindow = () => {
+const VideoConfWindow = () => {
   return (
-    <div className='w-full '>
+    <div className='w-full flex flex-row'>
         <LeftPanel/>
         <VideoStream/>
 
@@ -12,4 +12,4 @@ const videoConfWindow = () => {
   )
 }
 
-export default videoConfWindow
+export default VideoConfWindow

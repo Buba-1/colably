@@ -15,26 +15,30 @@ export default function LeftPanel() {
         }
     }
   return (
-    <Div>
-      <Div className= "w-1/5 flex">
+    <div className="w-1/5">
+      <div className="w-full flex">
         <button
-          onClick={switcher("chat")}
+          onClick={() => {
+            switcher("chat");
+          }}
           className="px-6 py-2 bg-gray-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors"
         >
           chat
         </button>
 
         <button
-          onClick={switcher("members")}
+          onClick={() => {
+            switcher("members");
+          }}
           className="px-6 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition-colors"
         >
           members
         </button>
-      </Div>
-      <Div>
+      </div>
+      <div className="w-full">
         {panelState === "chat" && <LiveChat />}
         {panelState === "members" && <Members />}
-      </Div>
-    </Div>
+      </div>
+    </div>
   );
 }
